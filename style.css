@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body {
+	width: 830px;
+	margin: 0 auto;
+}
+
+#map {
+    position: relative;
+}
+
+.legend {
+	display: flex;
+}
+
+.key {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 16.67%;
+	font-size: 10px;
+	color: #fff;
+	height: 31px;
+}
+
+.key i {
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    width: 135px;
+}
+
+.tooltip:hover {
+	width:	160px;
+}
+
+.top {
+    display: flex;
+}
+
+.content {
+    display: none;
+}
+
+.tooltip:hover > .content {
+    display: block;
+}
+
+.icon-container {
+    flex: 1;
+}
+
+.icon-container:first-of-type,
+.key:first-of-type {
+    border-top-left-radius: 5px;
+}
+
+.icon-container:last-of-type,
+.key:last-of-type {
+	border-top-right-radius: 5px;
+}
+
+.key:first-of-type {
+    border-bottom-left-radius: 5px;
+}
+
+.key:last-of-type {
+	border-bottom-right-radius: 5px;
+}
+
+.icon-container .icon {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 5px;
+    font-size: 15px;
+}
+
+.tooltip:hover .icon {
+	font-size: 25px;
+}
+
+.icon-container--blue,
+.key--blue {
+    background-color: rgb(96, 162, 213);
+}
+
+.icon-container--green,
+.key--green {
+    background-color: rgb(112, 194, 131);
+}
+
+.icon-container--yellow,
+.key--yellow {
+    background-color: rgb(249, 167, 50);;
+}
+
+.icon-container--red,
+.key--red {
+    background-color: rgb(241, 107, 74);
+}
+
+.icon-container--dark-purple,
+.key--dark-purple {
+    background-color: rgb(148, 126, 149);
+}
+
+.icon-container--purple,
+.key--purple {
+    background-color: rgb(98, 106, 175);
+}
+
+.header {
+	background-color: #3B464E;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 10px;
+	height: 25px;
+}
+
+.tooltip:hover .header {
+	font-size: 15px;
+}
+
+.content {
+	padding: 10px;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	position: relative;
+	margin-top: -3px;
+	font-size: 10px;
+}
+
+.content i {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+
+.dot {
+    background-color: #60A2D5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot:after {
+	content: '';
+	position: absolute;
+	background-color: #60A2D5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all .2s ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.dot.active:after {
+	transform: scale(3);
+	opacity: .7;
+}
+
+.dot--active {
+    transform: scale(2);
+    opacity: .7;
+}
+
+#columbia-basin {
+    top: 120px;
+}
+
+#central-valley {
+	left: 20px;
+	top: 300px;
+}
+
+#water-utilities {
+	top: 150px;
+	left: 200px;
+}
+
+#rio-grande-valley {
+	top: 290px;
+	left: 210px;	
+}
+
+#great-lakes {
+	left: 320px;
+	top: 5px;
+}
+
+#mississippi-basin {
+	left: 390px;
+	top: 160px;
+}
+
+#galveston-bay {
+	top: 305px;
+	left: 420px;
+}
+
+#catawba-basin {
+	top: 345px;
+	left: 640px;
+}
+
+#research-triangle {
+	left: 640px;
+	top: 170px;
+}
+
+#roanoke-basin {
+	top: 33px;
+	left: 547px;
+}
+
+
+#columbia-basin--dot {
+	left: 65px;
+	top: 57px;
+}
+#central-valley--dot {
+	left: 75px;
+	top: 260px;
+}
+#great-lakes--dot {
+	top: 93px;
+	left: 490px;
+}
+#mississippi-basin--dot {
+	left: 460px;
+	top: 255px;
+}
+#rio-grande-valley--dot {
+	left: 330px;
+	top: 437px;
+}
+#galveston-bay--dot {
+	left: 382px;
+	top: 385px;
+}
+#catawba-basin--dot {
+	left: 590px;
+	top: 265px;
+}
+#roanoke-basin--dot {
+	left: 621px;
+	top: 235px;
+}
+#research-triangle--dot {
+	left: 607px;
+	top: 248px;
+}
