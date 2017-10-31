@@ -215,7 +215,7 @@ body {
 .dot:after {
 	content: '';
 	position: absolute;
-	background-color: #60A2D5;
+	background-color: #ADC6D9;
     width: 10px;
     height: 10px;
     border-radius: 50%;
