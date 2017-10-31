@@ -55,12 +55,18 @@ body {
 	margin: 0 auto;
 }
 
+.map-wrapper{
+	text-align: center;
+}
+
 #map {
     position: relative;
+    display: inline-block;
 }
 
 .legend {
 	display: flex;
+	margin-bottom: 35px;
 }
 
 .key {
