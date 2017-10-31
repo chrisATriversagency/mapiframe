@@ -64,6 +64,15 @@ body {
     display: inline-block;
 }
 
+#blue-svg {
+    position: absolute;
+    width: 100%;
+    top: -37px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
 .legend {
 	display: flex;
 	margin-bottom: 35px;
@@ -87,6 +96,7 @@ body {
 .tooltip {
     position: absolute;
     width: 135px;
+    z-index: 5;
 }
 
 .tooltip:hover {
@@ -210,6 +220,7 @@ body {
     height: 10px;
     border-radius: 50%;
     position: absolute;
+    z-index: 1;
 }
 
 .dot:after {

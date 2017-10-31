@@ -1,8 +1,21 @@
 (function() {
 
     var toolTips = document.querySelectorAll('.tooltip');
+    var waterUtilities = document.getElementById('water-utilities');
+    var blueMap = document.getElementById('blue-svg');
+
+    if (waterUtilities != null) {
+    	waterUtilities.addEventListener('mouseover', function() {
+    		blueMap.style.opacity = '1';
+    	});
+
+    	waterUtilities.addEventListener('mouseleave', function() {
+    		blueMap.style.opacity = '0';
+    	});
+    }
 
     for (var i = 0; i < toolTips.length; i++) {
+    	console.log(document.getElementById(toolTips[i].id + '--dot'));
     	activeDot(toolTips[i]);
     	removeActiveDot(toolTips[i]);
     }
@@ -13,8 +26,9 @@
         	var matchingDotId =  id + '--dot';
         	var matchingDot = document.getElementById(matchingDotId);
 
-        	matchingDot.className = 'dot active';
-
+        	if (matchingDot != null) {
+        		matchingDot.className = 'dot active';
+        	}
         });
     }
 
@@ -24,8 +38,9 @@
         	var matchingDotId =  id + '--dot';
         	var matchingDot = document.getElementById(matchingDotId);
 
-        	matchingDot.className = 'dot';
-
+        	if (matchingDot != null) {
+        		matchingDot.className = 'dot';
+        	}
         });
     }
 
