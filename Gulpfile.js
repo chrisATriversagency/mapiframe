@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
-var input = './assets/sass/**/*.scss';
+var input = './assets/sass/style.scss';
 var output = './public/css';
 
 gulp.task('sass', function () {
@@ -17,7 +17,7 @@ gulp.task('watch', function() {
   return gulp
     // Watch the input folder for change,
     // and run `sass` task when something happens
-    .watch(input, ['sass'])
+    .watch('./assets/**/*.scss', ['sass'])
     // When there is a change,
     // log a message in the console
     .on('change', function(event) {
