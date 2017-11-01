@@ -47,17 +47,74 @@ table {
 	border-spacing: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    .right {
+        width: 75%;
+    }
+
+    .left {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.right {
+    width: 100%;
+    float: left;
+    padding: 0 15px;
+}
+
+.left {
+    width: 100%;
+    float: left;
+    padding: 0 15px;
+}
 
 
 body {
-	width: 830px;
-	margin: 0 auto;
 	font-family: 'Roboto Slab', serif;
 }
 
 .map-wrapper{
 	text-align: center;
+    padding: 0 40px;
 }
 
 #map {
@@ -83,9 +140,9 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 16.67%;
-	font-size: 10px;
+	font-size: 12px;
 	color: #fff;
-	height: 31px;
+	height: 35px;
 }
 
 .key i {
@@ -98,10 +155,18 @@ body {
     width: 135px;
     z-index: 5;
     text-align: left;
+    transition: transform .2s .1s ease;
 }
 
 .tooltip:hover {
-	width:	160px;
+	/*transform: scale(1.1);*/
+    width: 215px;
+    z-index: 6;
+}
+
+.tooltip.shrink {
+    transform: scale(.95);
+    opacity: .75;
 }
 
 .top {
@@ -218,21 +283,40 @@ body {
 }
 
 .content {
-	font-family: 'Roboto Condensed', sans-serif;
-	padding: 10px;
+	font-family: 'Roboto', sans-serif;
+	padding: 15px 20px 15px 10px;
 	background-size: cover;
 	background-position: center;
 	color: #fff;
 	position: relative;
 	margin-top: -3px;
 	font-size: 10px;
+    font-weight: 300;
+    line-height: 1.3;
+    position: relative;
+}
+
+.content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3B464E;
+    opacity: 0.4;
 }
 
 .content i {
 	position: absolute;
 	bottom: 8px;
 	right: 8px;
-	font-size: 14px;
+	font-size: 16px;
+}
+
+.content p {
+    position: relative;
 }
 
 
@@ -270,88 +354,89 @@ body {
 }
 
 #columbia-basin {
-    top: 120px;
+    top: 27%;
+    left: -3%;
 }
 
 #central-valley {
-	left: 20px;
-	top: 300px;
+    top: 66.5%;
+    left: 4%;
 }
 
 #water-utilities {
-	top: 150px;
-	left: 200px;
+    top: 34%;
+    left: 24%;
 }
 
 #rio-grande-valley {
-	top: 290px;
-	left: 210px;
+    top: 66%;
+    left: 30%;
 }
 
 #great-lakes {
-	left: 320px;
-	top: 5px;
+    top: 5%;
+    left: 44%;
 }
 
 #mississippi-basin {
-	left: 390px;
-	top: 160px;
+    left: 58%;
+    top: 36%;
 }
 
 #galveston-bay {
-	top: 305px;
-	left: 420px;
+    top: 70%;
+    left: 58%;
 }
 
 #catawba-basin {
-	top: 345px;
-	left: 640px;
+    top: 79%;
+    left: 85%;
 }
 
 #research-triangle {
-	left: 640px;
-	top: 170px;
+    left: 88%;
+    top: 39%;
 }
 
 #roanoke-basin {
-	top: 33px;
-	left: 547px;
+    left: 78%;
+    top: 10%;
 }
 
 
 #columbia-basin--dot {
-	left: 65px;
-	top: 57px;
+    left: 10%;
+    top: 13.5%;
 }
 #central-valley--dot {
-	left: 75px;
-	top: 260px;
+    left: 9%;
+    top: 53.5%;
 }
 #great-lakes--dot {
-	top: 93px;
-	left: 490px;
+    left: 67%;
+    top: 21.5%;
 }
 #mississippi-basin--dot {
-	left: 460px;
-	top: 255px;
+    left: 63%;
+    top: 56%;
 }
 #rio-grande-valley--dot {
-	left: 330px;
-	top: 437px;
+    top: 95.75%;
+    left: 45.5%;
 }
 #galveston-bay--dot {
-	left: 382px;
-	top: 385px;
+    top: 84%;
+    left: 53%;
 }
 #catawba-basin--dot {
-	left: 590px;
-	top: 265px;
+    left: 82%;
+    top: 58%;
 }
 #roanoke-basin--dot {
-	left: 621px;
-	top: 235px;
+    top: 51.25%;
+    left: 85.5%;
 }
 #research-triangle--dot {
-	left: 607px;
-	top: 248px;
+    left: 84%;
+    top: 55%;
 }

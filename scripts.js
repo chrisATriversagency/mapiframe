@@ -15,12 +15,10 @@
     }
 
     for (var i = 0; i < toolTips.length; i++) {
-    	console.log(document.getElementById(toolTips[i].id + '--dot'));
-    	activeDot(toolTips[i]);
-    	removeActiveDot(toolTips[i]);
+    	addListeners(toolTips[i]);
     }
 
-    function activeDot(element) {
+    function addListeners(element) {
         element.addEventListener('mouseover', function() {
         	var id = element.id;
         	var matchingDotId =  id + '--dot';
@@ -29,20 +27,26 @@
         	if (matchingDot != null) {
         		matchingDot.className = 'dot active';
         	}
-        });
-    }
 
-    function removeActiveDot(element) {
+            for (var i = 0; i < toolTips.length; i++) {
+                toolTips[i].className = 'tooltip shrink';
+                element.className = 'tooltip';
+            }
+        });
+
         element.addEventListener('mouseleave', function() {
-        	var id = element.id;
-        	var matchingDotId =  id + '--dot';
-        	var matchingDot = document.getElementById(matchingDotId);
+            var id = element.id;
+            var matchingDotId =  id + '--dot';
+            var matchingDot = document.getElementById(matchingDotId);
 
-        	if (matchingDot != null) {
-        		matchingDot.className = 'dot';
-        	}
+            if (matchingDot != null) {
+                matchingDot.className = 'dot';
+            }
+
+            for (var i = 0; i < toolTips.length; i++) {
+                toolTips[i].className = 'tooltip';
+            }
         });
     }
-
 
 })()
