@@ -1,0 +1,20 @@
+.legend {
+	display: flex;
+	margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.key {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 16.67%;
+	font-size: 12px;
+	color: #fff;
+	height: 35px;
+}
+
+.key i {
+	font-size: 18px;
+	margin-right: 10px;
+}
