@@ -53,6 +53,7 @@ table {
 body {
 	width: 830px;
 	margin: 0 auto;
+	font-family: 'Roboto Slab', serif;
 }
 
 .map-wrapper{
@@ -97,6 +98,7 @@ body {
     position: absolute;
     width: 135px;
     z-index: 5;
+    text-align: left;
 }
 
 .tooltip:hover {
@@ -109,6 +111,7 @@ body {
 
 .content {
     display: none;
+    background-color: #3B464E;
 }
 
 .tooltip:hover > .content {
@@ -117,6 +120,12 @@ body {
 
 .icon-container {
     flex: 1;
+    height: 10px;
+    position: relative;
+}
+
+.tooltip:hover .icon-container {
+	height: 13px;
 }
 
 .icon-container:first-of-type,
@@ -141,8 +150,12 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 5px;
+    bottom: 6px;
     font-size: 15px;
+}
+
+.tooltip:hover .icon-container .icon {
+	bottom: 12px;
 }
 
 .tooltip:hover .icon {
@@ -185,11 +198,19 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 15px;
+	padding: 0 10px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	font-size: 10px;
 	height: 25px;
+}
+
+.header i {
+	font-size: 12px;
+}
+
+.tooltip:hover .header i {
+	display: none;
 }
 
 .tooltip:hover .header {
@@ -198,6 +219,7 @@ body {
 }
 
 .content {
+	font-family: 'Roboto Condensed', sans-serif;
 	padding: 10px;
 	background-size: cover;
 	background-position: center;
@@ -209,8 +231,9 @@ body {
 
 .content i {
 	position: absolute;
-	bottom: 15px;
-	right: 15px;
+	bottom: 8px;
+	right: 8px;
+	font-size: 14px;
 }
 
 
