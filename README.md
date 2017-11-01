@@ -7,4 +7,5 @@ Interactive map for UNC School of Public Health Center on Environmental and Fina
 
 ### Who do I talk to? ###
 
-Chris Calascione
+Chris Calascione(Developer)
+Charlie Cort(Designer)
