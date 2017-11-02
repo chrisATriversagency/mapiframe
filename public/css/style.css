@@ -226,9 +226,6 @@ body {
 .header {
   background-color: #3B464E;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -239,17 +236,43 @@ body {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   font-size: 12px;
-  height: 30px; }
+  height: 30px;
+  display: none; }
   @media (min-width: 517px) {
     .header {
       font-size: 10px;
       height: 25px;
-      padding: 0 10px; } }
+      padding: 0 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .header i {
   font-size: 12px;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg); }
+
+.mobile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (min-width: 517px) {
+    .mobile-header {
+      display: none; } }
+
+.mobile-header-link {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
 
 @media (min-width: 517px) {
   .map-tooltip:hover .header i {
@@ -275,8 +298,9 @@ body {
   background-color: #3B464E;
   display: none; }
 
-.map-tooltip:hover > .content {
-  display: block; }
+@media (min-width: 517px) {
+  .map-tooltip:hover > .content {
+    display: block; } }
 
 .content:before {
   content: '';
@@ -395,11 +419,12 @@ a.tooltip__link {
 #great-lakes {
   top: -3%;
   left: 40%; }
-  #great-lakes .map-tooltip:hover {
-    width: 172px; }
-    @media (min-width: 517px) and (max-width: 830px) {
-      #great-lakes .map-tooltip:hover {
-        width: 150px; } }
+  @media (min-width: 517px) and (max-width: 830px) {
+    #great-lakes .map-tooltip:hover {
+      width: 150px; } }
+  @media (min-width: 830px) {
+    #great-lakes .map-tooltip:hover {
+      width: 172px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #great-lakes:after {
       width: 43%;
@@ -425,11 +450,12 @@ a.tooltip__link {
 #mississippi-basin {
   left: 64%;
   top: 37%; }
-  #mississippi-basin .map-tooltip:hover {
-    width: 172px; }
-    @media (min-width: 517px) and (max-width: 830px) {
-      #mississippi-basin .map-tooltip:hover {
-        width: 150px; } }
+  @media (min-width: 517px) and (max-width: 830px) {
+    #mississippi-basin .map-tooltip:hover {
+      width: 150px; } }
+  @media (min-width: 830px) {
+    #mississippi-basin .map-tooltip:hover {
+      width: 172px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #mississippi-basin:after {
       width: 31%;
@@ -488,8 +514,9 @@ a.tooltip__link {
     #catawba-basin {
       top: 65%;
       left: 59%; } }
-  #catawba-basin .map-tooltip:hover {
-    width: 150px; }
+  @media (min-width: 517px) {
+    #catawba-basin .map-tooltip:hover {
+      width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #catawba-basin:after {
       width: 16%;
@@ -519,11 +546,12 @@ a.tooltip__link {
     #research-triangle {
       left: 84%;
       top: 50%; } }
-  #research-triangle .map-tooltip:hover {
-    width: 150px; }
-    @media (min-width: 517px) and (max-width: 830px) {
-      #research-triangle .map-tooltip:hover {
-        width: 130px; } }
+  @media (min-width: 517px) and (max-width: 830px) {
+    #research-triangle .map-tooltip:hover {
+      width: 130px; } }
+  @media (min-width: 830px) {
+    #research-triangle .map-tooltip:hover {
+      width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #research-triangle:after {
       width: 20%;
@@ -549,7 +577,7 @@ a.tooltip__link {
 #roanoke-basin {
   left: 78%;
   top: 10%; }
-  @media (min-width: 517px) and (max-width: 830px) {
+  @media (min-width: 517px) {
     #roanoke-basin .map-tooltip:hover {
       width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {

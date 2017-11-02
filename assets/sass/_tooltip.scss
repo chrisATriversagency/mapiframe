@@ -77,7 +77,6 @@
 .header {
 	background-color: #3B464E;
 	color: #fff;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 5px;
@@ -85,17 +84,35 @@
 	border-bottom-left-radius: 5px;
 	font-size: 12px;
 	height: 30px;
+    display: none;
 
     @media (min-width: $bootstrap_mobile) {
         font-size: 10px;
         height: 25px;
         padding: 0 10px;
+        display: flex;
     }
 }
 
 .header i {
 	font-size: 12px;
     transform: rotate(-90deg);
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    @media (min-width: $bootstrap_mobile) {
+        display: none;
+    }
+}
+
+.mobile-header-link {
+    justify-content: space-between;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
 }
 
 .map-tooltip:hover .header i {
@@ -130,7 +147,9 @@
 }
 
 .map-tooltip:hover > .content {
-    display: block;
+    @media (min-width: $bootstrap_mobile) {
+        display: block;
+    }
 }
 
 .content:before {
@@ -270,10 +289,13 @@ a.tooltip__link {
     left: 40%;
 
     .map-tooltip:hover {
-        width: 172px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 150px;
+        }
+
+        @media (min-width: $bootstrap_large) {
+            width: 172px;
         }
     }
 
@@ -304,10 +326,13 @@ a.tooltip__link {
     top: 37%;
 
     .map-tooltip:hover {
-        width: 172px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 150px;
+        }
+
+        @media (min-width: $bootstrap_large) {
+            width: 172px;
         }
     }
 
@@ -374,7 +399,9 @@ a.tooltip__link {
     }
 
     .map-tooltip:hover {
-        width: 150px;
+        @media (min-width: $bootstrap_mobile) {
+            width: 150px;
+        }
     }
 
     &:after {
@@ -409,10 +436,13 @@ a.tooltip__link {
     }
 
     .map-tooltip:hover {
-        width: 150px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 130px;
+        }
+
+        @media (min-width: $bootstrap_large) {
+            width: 150px;
         }
     }
 
@@ -443,7 +473,7 @@ a.tooltip__link {
     top: 10%;
 
     .map-tooltip:hover {
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
+        @media (min-width: $bootstrap_mobile) {
             width: 150px;
         }
     }
