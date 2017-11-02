@@ -442,6 +442,12 @@ a.tooltip__link {
     left: 78%;
     top: 10%;
 
+    .map-tooltip:hover {
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
+            width: 150px;
+        }
+    }
+
     &:after {
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
             width: 71%;

@@ -549,6 +549,9 @@ a.tooltip__link {
 #roanoke-basin {
   left: 78%;
   top: 10%; }
+  @media (min-width: 517px) and (max-width: 830px) {
+    #roanoke-basin .map-tooltip:hover {
+      width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #roanoke-basin:after {
       width: 71%;
