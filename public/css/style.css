@@ -1,3 +1,378 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.right {
+  width: 100%;
+  float: left;
+  padding: 0 15px; }
+
+.left {
+  width: 100%;
+  float: left;
+  padding: 0 15px; }
+
+body {
+  font-family: 'Roboto Slab', serif; }
+
+.map-wrapper {
+  text-align: center;
+  padding: 0 40px; }
+
+#map {
+  position: relative; }
+
+#blue-svg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0px;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease; }
+
+.icon-container:first-of-type,
+.key:first-of-type {
+  border-top-left-radius: 5px; }
+
+.icon-container:last-of-type,
+.key:last-of-type {
+  border-top-right-radius: 5px; }
+
+.key:first-of-type {
+  border-bottom-left-radius: 5px; }
+
+.key:last-of-type {
+  border-bottom-right-radius: 5px; }
+
+.icon-container .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  bottom: 6px;
+  font-size: 15px; }
+
+.tooltip:hover .icon-container .icon {
+  bottom: 12px; }
+
+.tooltip:hover .icon {
+  font-size: 25px; }
+
+.icon-container--blue,
+.key--blue {
+  background-color: #60a2d5; }
+
+.icon-container--green,
+.key--green {
+  background-color: #70c283; }
+
+.icon-container--yellow,
+.key--yellow {
+  background-color: #f9a732; }
+
+.icon-container--red,
+.key--red {
+  background-color: #f16b4a; }
+
+.icon-container--dark-purple,
+.key--dark-purple {
+  background-color: #947e95; }
+
+.icon-container--purple,
+.key--purple {
+  background-color: #626aaf; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px; }
+  .right {
+    width: 75%; }
+  .left {
+    width: 25%; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+
+.dot {
+  background-color: #60A2D5;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1; }
+
+.dot:after {
+  content: '';
+  position: absolute;
+  background-color: #ADC6D9;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  opacity: 0;
+  top: 0;
+  left: 0; }
+
+.dot.active:after {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  opacity: .7; }
+
+.dot--active {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: .7; }
+
+#columbia-basin--dot {
+  left: 10%;
+  top: 13.5%; }
+
+#central-valley--dot {
+  left: 9%;
+  top: 53.5%; }
+
+#great-lakes--dot {
+  left: 67%;
+  top: 21.5%; }
+
+#mississippi-basin--dot {
+  left: 63%;
+  top: 56%; }
+
+#rio-grande-valley--dot {
+  top: 95.75%;
+  left: 45.5%; }
+
+#galveston-bay--dot {
+  top: 84%;
+  left: 53%; }
+
+#catawba-basin--dot {
+  left: 82%;
+  top: 58%; }
+
+#roanoke-basin--dot {
+  top: 51.25%;
+  left: 85.5%; }
+
+#research-triangle--dot {
+  left: 84%;
+  top: 55%; }
+
+.tooltip {
+  position: absolute;
+  width: 135px;
+  z-index: 5;
+  text-align: left;
+  -webkit-transition: -webkit-transform .2s .1s ease;
+  transition: -webkit-transform .2s .1s ease;
+  transition: transform .2s .1s ease;
+  transition: transform .2s .1s ease, -webkit-transform .2s .1s ease; }
+
+.tooltip:hover {
+  /*transform: scale(1.1);*/
+  width: 215px;
+  z-index: 6; }
+
+.tooltip.shrink {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  opacity: .75; }
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.content {
+  display: none;
+  background-color: #3B464E; }
+
+.tooltip:hover > .content {
+  display: block; }
+
+.icon-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 10px;
+  position: relative; }
+
+.tooltip:hover .icon-container {
+  height: 13px; }
+
+.header {
+  background-color: #3B464E;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 10px;
+  height: 25px; }
+
+.header i {
+  font-size: 12px; }
+
+.tooltip:hover .header i {
+  display: none; }
+
+.tooltip:hover .header {
+  font-size: 15px;
+  height: 40px; }
+
+.content {
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 20px 15px 10px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  margin-top: -3px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.3;
+  position: relative; }
+
+.content:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3B464E;
+  opacity: 0.4; }
+
+.content i {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 16px; }
+
+.content p {
+  position: relative; }
+
+#columbia-basin {
+  top: 27%;
+  left: -3%; }
+
+#central-valley {
+  top: 66.5%;
+  left: 4%; }
+
+#water-utilities {
+  top: 34%;
+  left: 24%; }
+
+#rio-grande-valley {
+  top: 66%;
+  left: 30%; }
+
+#great-lakes {
+  top: 5%;
+  left: 44%; }
+
+#mississippi-basin {
+  left: 58%;
+  top: 36%; }
+
+#galveston-bay {
+  top: 70%;
+  left: 58%; }
+
+#catawba-basin {
+  top: 79%;
+  left: 85%; }
+
+#research-triangle {
+  left: 88%;
+  top: 39%; }
+
+#roanoke-basin {
+  left: 78%;
+  top: 10%; }
+
 .legend {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,7 +391,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 16.67%;
+  width: 16.66%;
   font-size: 12px;
   color: #fff;
   height: 35px; }
