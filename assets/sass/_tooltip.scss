@@ -366,7 +366,12 @@ a.tooltip__link {
 
 #catawba-basin {
     top: 65%;
-    left: 59%;
+    left: 85%;
+
+    @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        top: 65%;
+        left: 59%;
+    }
 
     &:hover .map-tooltip {
         width: 172px;

@@ -483,7 +483,11 @@ a.tooltip__link {
 
 #catawba-basin {
   top: 65%;
-  left: 59%; }
+  left: 85%; }
+  @media (min-width: 517px) and (max-width: 682px) {
+    #catawba-basin {
+      top: 65%;
+      left: 59%; } }
   #catawba-basin:hover .map-tooltip {
     width: 172px; }
     @media (min-width: 517px) and (max-width: 682px) {
