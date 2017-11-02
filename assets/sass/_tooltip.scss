@@ -269,7 +269,7 @@ a.tooltip__link {
     top: -3%;
     left: 40%;
 
-    &:hover .map-tooltip {
+    .map-tooltip:hover {
         width: 172px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
@@ -303,7 +303,7 @@ a.tooltip__link {
     left: 64%;
     top: 37%;
 
-    &:hover .map-tooltip {
+    .map-tooltip:hover {
         width: 172px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
@@ -373,12 +373,8 @@ a.tooltip__link {
         left: 59%;
     }
 
-    &:hover .map-tooltip {
-        width: 172px;
-
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
-            width: 150px;
-        }
+    .map-tooltip:hover {
+        width: 150px;
     }
 
     &:after {
@@ -412,8 +408,8 @@ a.tooltip__link {
         top: 50%;
     }
 
-    &:hover .map-tooltip {
-        width: 172px;
+    .map-tooltip:hover {
+        width: 150px;
 
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 130px;

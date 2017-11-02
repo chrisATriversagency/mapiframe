@@ -395,10 +395,10 @@ a.tooltip__link {
 #great-lakes {
   top: -3%;
   left: 40%; }
-  #great-lakes:hover .map-tooltip {
+  #great-lakes .map-tooltip:hover {
     width: 172px; }
     @media (min-width: 517px) and (max-width: 830px) {
-      #great-lakes:hover .map-tooltip {
+      #great-lakes .map-tooltip:hover {
         width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #great-lakes:after {
@@ -425,10 +425,10 @@ a.tooltip__link {
 #mississippi-basin {
   left: 64%;
   top: 37%; }
-  #mississippi-basin:hover .map-tooltip {
+  #mississippi-basin .map-tooltip:hover {
     width: 172px; }
     @media (min-width: 517px) and (max-width: 830px) {
-      #mississippi-basin:hover .map-tooltip {
+      #mississippi-basin .map-tooltip:hover {
         width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #mississippi-basin:after {
@@ -488,11 +488,8 @@ a.tooltip__link {
     #catawba-basin {
       top: 65%;
       left: 59%; } }
-  #catawba-basin:hover .map-tooltip {
-    width: 172px; }
-    @media (min-width: 517px) and (max-width: 830px) {
-      #catawba-basin:hover .map-tooltip {
-        width: 150px; } }
+  #catawba-basin .map-tooltip:hover {
+    width: 150px; }
   @media (min-width: 517px) and (max-width: 682px) {
     #catawba-basin:after {
       width: 16%;
@@ -522,10 +519,10 @@ a.tooltip__link {
     #research-triangle {
       left: 84%;
       top: 50%; } }
-  #research-triangle:hover .map-tooltip {
-    width: 172px; }
+  #research-triangle .map-tooltip:hover {
+    width: 150px; }
     @media (min-width: 517px) and (max-width: 830px) {
-      #research-triangle:hover .map-tooltip {
+      #research-triangle .map-tooltip:hover {
         width: 130px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #research-triangle:after {
