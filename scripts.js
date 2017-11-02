@@ -1,9 +1,9 @@
 (function() {
 
-    var toolTips = document.querySelectorAll('.tooltip');
+    var toolTips = document.querySelectorAll('.map-tooltip');
     var waterUtilities = document.getElementById('water-utilities');
     var blueMap = document.getElementById('blue-svg');
-
+console.log(toolTips);
     if (waterUtilities != null) {
     	waterUtilities.addEventListener('mouseover', function() {
     		blueMap.style.opacity = '1';
@@ -20,7 +20,7 @@
 
     function addListeners(element) {
         element.addEventListener('mouseover', function() {
-        	var id = element.id;
+        	var id = element.parentElement.id;
         	var matchingDotId =  id + '--dot';
         	var matchingDot = document.getElementById(matchingDotId);
 
@@ -29,13 +29,13 @@
         	}
 
             for (var i = 0; i < toolTips.length; i++) {
-                toolTips[i].className = 'tooltip shrink';
-                element.className = 'tooltip';
+                toolTips[i].className = 'map-tooltip shrink';
+                element.className = 'map-tooltip';
             }
         });
 
         element.addEventListener('mouseleave', function() {
-            var id = element.id;
+            var id = element.parentElement.id;
             var matchingDotId =  id + '--dot';
             var matchingDot = document.getElementById(matchingDotId);
 
@@ -44,7 +44,7 @@
             }
 
             for (var i = 0; i < toolTips.length; i++) {
-                toolTips[i].className = 'tooltip';
+                toolTips[i].className = 'map-tooltip';
             }
         });
     }

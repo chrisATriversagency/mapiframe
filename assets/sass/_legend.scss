@@ -13,7 +13,11 @@
 	color: #fff;
 	height: 35px;
 
-	@media (min-width: 768px) {
+    @media (min-width: $bootstrap_medium) {
+        width: 33.33%;
+    }
+
+	@media (min-width: $bootstrap_large) {
 		width: 16.66%;
 	}
 }
@@ -24,14 +28,14 @@
 }
 
 .key:first-of-type {
-	@media (min-width: $mobile) {
+	@media (min-width: $bootstrap_large) {
 		border-top-left-radius: 5px;
 		border-bottom-left-radius: 5px;
 	}
 }
 
 .key:last-of-type {
-	@media (min-width: $mobile) {
+	@media (min-width: $bootstrap_large) {
 		border-top-right-radius: 5px;
 		border-bottom-right-radius: 5px;
 	}

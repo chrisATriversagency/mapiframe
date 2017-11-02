@@ -49,60 +49,18 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px; }
-
-.row:after {
-  content: '';
-  display: table;
-  clear: both; }
-
-.right {
-  width: 100%;
-  float: left;
-  padding: 0 15px; }
-
-.left {
-  width: 100%;
-  float: left;
-  padding: 0 15px; }
-
 body {
   font-family: 'Roboto Slab', serif; }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px; } }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px; }
-  .right {
-    width: 75%; }
-  .left {
-    width: 25%; } }
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }
-
 .dot {
   display: none;
-  background-color: #60A2D5;
+  background-color: #58A0D6;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   position: absolute;
   z-index: 1; }
-  @media (min-width: 600px) {
+  @media (min-width: 0px) {
     .dot {
       display: block; } }
 
@@ -166,7 +124,7 @@ body {
   left: 84%;
   top: 55%; }
 
-@media (max-width: 599px) {
+@media (max-width: -1px) {
   .tooltip-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -175,41 +133,49 @@ body {
         flex-wrap: wrap;
     margin-left: -15px; } }
 
-.tooltip {
+@media (max-width: -1px) {
+  .tooltip-wrapper {
+    padding-left: 15px;
+    width: 50%;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+@media (min-width: 0px) {
+  .tooltip-wrapper {
+    position: absolute;
+    width: 135px;
+    height: 35px; }
+    .tooltip-wrapper:after {
+      position: absolute;
+      content: '';
+      background-color: #58A0D6;
+      height: 1px;
+      display: block; } }
+
+.map-tooltip {
   text-align: left; }
-  @media (max-width: 599px) {
-    .tooltip {
-      padding-left: 15px;
-      width: 50%;
-      margin-bottom: 15px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
-  @media (min-width: 600px) {
-    .tooltip {
+  @media (min-width: 0px) {
+    .map-tooltip {
       position: absolute;
       width: 135px;
       z-index: 5;
       -webkit-transition: -webkit-transform .2s .1s ease;
       transition: -webkit-transform .2s .1s ease;
       transition: transform .2s .1s ease;
-      transition: transform .2s .1s ease, -webkit-transform .2s .1s ease; } }
-
-@media (min-width: 600px) {
-  .tooltip:hover {
-    /*transform: scale(1.1);*/
-    width: 215px;
-    z-index: 6; } }
-
-@media (min-width: 600px) {
-  .tooltip.shrink {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-    opacity: .75; } }
+      transition: transform .2s .1s ease, -webkit-transform .2s .1s ease; }
+      .map-tooltip:hover {
+        width: 215px;
+        z-index: 6; }
+      .map-tooltip.shrink {
+        -webkit-transform: scale(0.95);
+                transform: scale(0.95);
+        opacity: .75; } }
 
 .top {
   display: -webkit-box;
@@ -223,8 +189,8 @@ body {
   height: 10px;
   position: relative; }
 
-@media (min-width: 600px) {
-  .tooltip:hover .icon-container {
+@media (min-width: 0px) {
+  .map-tooltip:hover .icon-container {
     height: 13px; } }
 
 .header {
@@ -248,15 +214,15 @@ body {
 .header i {
   font-size: 12px;
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 0px) {
     .header i {
       display: block; } }
 
-.tooltip:hover .header i {
+.map-tooltip:hover .header i {
   display: none; }
 
-@media (min-width: 600px) {
-  .tooltip:hover .header {
+@media (min-width: 0px) {
+  .map-tooltip:hover .header {
     font-size: 15px;
     height: 40px; } }
 
@@ -273,16 +239,16 @@ body {
   line-height: 1.3;
   position: relative;
   background-color: #3B464E; }
-  @media (max-width: 599px) {
+  @media (max-width: -1px) {
     .content {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; } }
-  @media (min-width: 600px) {
+  @media (min-width: 0px) {
     .content {
       display: none; } }
 
-.tooltip:hover > .content {
+.map-tooltip:hover > .content {
   display: block; }
 
 .content:before {
@@ -305,53 +271,121 @@ body {
 .content p {
   position: relative; }
 
-@media (min-width: 600px) {
-  .tooltip:hover .icon-container .icon {
+@media (min-width: 0px) {
+  .map-tooltip:hover .icon-container .icon {
     bottom: 12px; } }
 
-@media (min-width: 600px) {
-  .tooltip:hover .icon {
+@media (min-width: 0px) {
+  .map-tooltip:hover .icon {
     font-size: 25px; } }
+
+a.tooltip__link {
+  color: #fff;
+  text-decoration: none; }
+  a.tooltip__link:hover {
+    color: #fff; }
 
 #columbia-basin {
   top: 27%;
-  left: -3%; }
+  left: 0%; }
+  #columbia-basin:after {
+    width: 54%;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+    left: 24%;
+    top: -84%; }
 
 #central-valley {
   top: 66.5%;
   left: 4%; }
+  #central-valley:after {
+    width: 62%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 22%;
+    top: -84%; }
 
 #water-utilities {
-  top: 34%;
-  left: 24%; }
-
-#rio-grande-valley {
-  top: 66%;
+  top: 28%;
   left: 30%; }
 
+#rio-grande-valley {
+  top: 53%;
+  left: 26%; }
+  #rio-grande-valley:after {
+    width: 149%;
+    -webkit-transform: rotate(75deg);
+            transform: rotate(75deg);
+    left: 19%;
+    top: 312%; }
+
 #great-lakes {
-  top: 5%;
-  left: 44%; }
+  top: -3%;
+  left: 40%; }
+  #great-lakes:hover .map-tooltip {
+    width: 172px; }
+  #great-lakes:after {
+    width: 110%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 62%;
+    top: 200%; }
 
 #mississippi-basin {
-  left: 58%;
-  top: 36%; }
+  left: 65%;
+  top: 28%; }
+  #mississippi-basin:hover .map-tooltip {
+    width: 172px; }
+  #mississippi-basin:after {
+    width: 100%;
+    -webkit-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+    left: -39%;
+    top: 208%; }
 
 #galveston-bay {
   top: 70%;
   left: 58%; }
+  #galveston-bay:after {
+    width: 48%;
+    -webkit-transform: rotate(-38deg);
+            transform: rotate(-38deg);
+    left: -27%;
+    top: 142%; }
 
 #catawba-basin {
   top: 79%;
   left: 85%; }
+  #catawba-basin:hover .map-tooltip {
+    width: 172px; }
+  #catawba-basin:after {
+    width: 95%;
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+    left: -33%;
+    top: -120%; }
 
 #research-triangle {
   left: 88%;
   top: 39%; }
+  #research-triangle:hover .map-tooltip {
+    width: 172px; }
+  #research-triangle:after {
+    width: 95%;
+    -webkit-transform: rotate(152deg);
+            transform: rotate(152deg);
+    left: -22%;
+    top: 144%; }
 
 #roanoke-basin {
   left: 78%;
   top: 10%; }
+  #roanoke-basin:after {
+    width: 136%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    left: -23%;
+    top: 310%; }
 
 .legend {
   display: -webkit-box;
@@ -375,7 +409,10 @@ body {
   font-size: 12px;
   color: #fff;
   height: 35px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
+    .key {
+      width: 33.33%; } }
+  @media (min-width: 1200px) {
     .key {
       width: 16.66%; } }
 
@@ -383,18 +420,18 @@ body {
   font-size: 18px;
   margin-right: 10px; }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .key:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px; } }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .key:last-of-type {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; } }
 
 .key--blue {
-  background-color: #60a2d5; }
+  background-color: #58A0D6; }
 
 .key--green {
   background-color: #70c283; }
@@ -412,7 +449,7 @@ body {
   background-color: #626aaf; }
 
 .icon-container--blue {
-  background-color: #60a2d5; }
+  background-color: #58A0D6; }
 
 .icon-container--green {
   background-color: #70c283; }
@@ -448,9 +485,9 @@ body {
 
 .map-wrapper {
   text-align: center; }
-  @media (min-width: 600px) {
+  @media (min-width: 0px) {
     .map-wrapper {
-      padding: 0 40px; } }
+      padding: 0 80px 0 0; } }
 
 #map {
   position: relative; }
@@ -467,7 +504,7 @@ body {
 #svg,
 #blue-svg {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 0px) {
     #svg,
     #blue-svg {
       display: block; } }

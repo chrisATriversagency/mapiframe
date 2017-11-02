@@ -7,9 +7,7 @@
     }
 }
 
-.tooltip {
-    text-align: left;
-
+.tooltip-wrapper {
     @media (max-width: $mobile - 1) {
         padding-left: 15px;
         width: 50%;
@@ -21,27 +19,39 @@
     @media (min-width: $mobile) {
         position: absolute;
         width: 135px;
+        height: 35px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            background-color: $blue;
+            height: 1px;
+            display: block;
+        }
+    }
+}
+
+.map-tooltip {
+    text-align: left;
+
+    @media (min-width: $mobile) {
+        position: absolute;
+        width: 135px;
         z-index: 5;
         transition: transform .2s .1s ease;
+
+        &:hover {
+            width: 215px;
+            z-index: 6;
+        }
+
+        &.shrink {
+            transform: scale(.95);
+            opacity: .75;
+        }
     }
 }
 
-.tooltip:hover {
-
-    @media (min-width: $mobile) {
-        /*transform: scale(1.1);*/
-        width: 215px;
-        z-index: 6;
-    }
-}
-
-.tooltip.shrink {
-
-    @media (min-width: $mobile) {
-        transform: scale(.95);
-        opacity: .75;
-    }
-}
 
 .top {
     display: flex;
@@ -53,7 +63,7 @@
     position: relative;
 }
 
-.tooltip:hover .icon-container {
+.map-tooltip:hover .icon-container {
 
     @media (min-width: $mobile) {
         height: 13px;
@@ -82,11 +92,11 @@
     }
 }
 
-.tooltip:hover .header i {
+.map-tooltip:hover .header i {
 	display: none;
 }
 
-.tooltip:hover .header {
+.map-tooltip:hover .header {
 
     @media (min-width: $mobile) {
         font-size: 15px;
@@ -117,7 +127,7 @@
     }
 }
 
-.tooltip:hover > .content {
+.map-tooltip:hover > .content {
     display: block;
 }
 
@@ -144,64 +154,152 @@
     position: relative;
 }
 
-.tooltip:hover .icon-container .icon {
+.map-tooltip:hover .icon-container .icon {
     @media (min-width: $mobile) {
         bottom: 12px;
     }
 }
 
-.tooltip:hover .icon {
+.map-tooltip:hover .icon {
     @media (min-width: $mobile) {
         font-size: 25px;
     }
 }
 
+a.tooltip__link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
 #columbia-basin {
     top: 27%;
-    left: -3%;
+    left: 0%;
+
+    &:after {
+        width: 54%;
+        transform: rotate(-70deg);
+        left: 24%;
+        top: -84%;
+    }
 }
 
 #central-valley {
     top: 66.5%;
     left: 4%;
+
+    &:after {
+        width: 62%;
+        transform: rotate(45deg);
+        left: 22%;
+        top: -84%;
+    }
 }
 
 #water-utilities {
-    top: 34%;
-    left: 24%;
-}
-
-#rio-grande-valley {
-    top: 66%;
+    top: 28%;
     left: 30%;
 }
 
+#rio-grande-valley {
+    top: 53%;
+    left: 26%;
+
+    &:after {
+        width: 149%;
+        transform: rotate(75deg);
+        left: 19%;
+        top: 312%;
+    }
+}
+
 #great-lakes {
-    top: 5%;
-    left: 44%;
+    top: -3%;
+    left: 40%;
+
+    &:hover .map-tooltip {
+        width: 172px;
+    }
+
+    &:after {
+        width: 110%;
+        transform: rotate(45deg);
+        left: 62%;
+        top: 200%;
+    }
 }
 
 #mississippi-basin {
-    left: 58%;
-    top: 36%;
+    left: 65%;
+    top: 28%;
+
+    &:hover .map-tooltip {
+        width: 172px;
+    }
+
+    &:after {
+        width: 100%;
+        transform: rotate(-70deg);
+        left: -39%;
+        top: 208%;
+    }
 }
 
 #galveston-bay {
     top: 70%;
     left: 58%;
+
+    &:after {
+        width: 48%;
+        transform: rotate(-38deg);
+        left: -27%;
+        top: 142%;
+    }
 }
 
 #catawba-basin {
     top: 79%;
     left: 85%;
+
+    &:hover .map-tooltip {
+        width: 172px;
+    }
+
+    &:after {
+        width: 95%;
+        transform: rotate(55deg);
+        left: -33%;
+        top: -120%;
+    }
 }
 
 #research-triangle {
     left: 88%;
     top: 39%;
+
+    &:hover .map-tooltip {
+        width: 172px;
+    }
+
+    &:after {
+        width: 95%;
+        transform: rotate(152deg);
+        left: -22%;
+        top: 144%;
+    }
 }
 
 #roanoke-basin {
     left: 78%;
     top: 10%;
+
+    &:after {
+        width: 136%;
+        transform: rotate(90deg);
+        left: -23%;
+        top: 310%;
+    }
 }
