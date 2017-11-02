@@ -102,7 +102,7 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: 1; }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     .dot {
       display: block; } }
 
@@ -166,7 +166,7 @@ body {
   left: 84%;
   top: 55%; }
 
-@media (max-width: 766px) {
+@media (max-width: 599px) {
   .tooltip-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -177,7 +177,7 @@ body {
 
 .tooltip {
   text-align: left; }
-  @media (max-width: 766px) {
+  @media (max-width: 599px) {
     .tooltip {
       padding-left: 15px;
       width: 50%;
@@ -189,7 +189,7 @@ body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     .tooltip {
       position: absolute;
       width: 135px;
@@ -199,13 +199,13 @@ body {
       transition: transform .2s .1s ease;
       transition: transform .2s .1s ease, -webkit-transform .2s .1s ease; } }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip:hover {
     /*transform: scale(1.1);*/
     width: 215px;
     z-index: 6; } }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip.shrink {
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
@@ -223,7 +223,7 @@ body {
   height: 10px;
   position: relative; }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip:hover .icon-container {
     height: 13px; } }
 
@@ -248,14 +248,14 @@ body {
 .header i {
   font-size: 12px;
   display: none; }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     .header i {
       display: block; } }
 
 .tooltip:hover .header i {
   display: none; }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip:hover .header {
     font-size: 15px;
     height: 40px; } }
@@ -273,12 +273,12 @@ body {
   line-height: 1.3;
   position: relative;
   background-color: #3B464E; }
-  @media (max-width: 766px) {
+  @media (max-width: 599px) {
     .content {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; } }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     .content {
       display: none; } }
 
@@ -305,11 +305,11 @@ body {
 .content p {
   position: relative; }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip:hover .icon-container .icon {
     bottom: 12px; } }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .tooltip:hover .icon {
     font-size: 25px; } }
 
@@ -383,12 +383,12 @@ body {
   font-size: 18px;
   margin-right: 10px; }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .key:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px; } }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .key:last-of-type {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; } }
@@ -448,7 +448,7 @@ body {
 
 .map-wrapper {
   text-align: center; }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     .map-wrapper {
       padding: 0 40px; } }
 
@@ -467,7 +467,7 @@ body {
 #svg,
 #blue-svg {
   display: none; }
-  @media (min-width: 767px) {
+  @media (min-width: 600px) {
     #svg,
     #blue-svg {
       display: block; } }
