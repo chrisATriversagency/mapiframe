@@ -272,7 +272,7 @@ a.tooltip__link {
     &:hover .map-tooltip {
         width: 172px;
 
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 150px;
         }
     }
@@ -306,7 +306,7 @@ a.tooltip__link {
     &:hover .map-tooltip {
         width: 172px;
 
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 150px;
         }
     }
@@ -376,7 +376,7 @@ a.tooltip__link {
     &:hover .map-tooltip {
         width: 172px;
 
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 150px;
         }
     }
@@ -415,7 +415,7 @@ a.tooltip__link {
     &:hover .map-tooltip {
         width: 172px;
 
-        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_large) {
             width: 130px;
         }
     }
