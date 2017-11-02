@@ -8,8 +8,13 @@
     position: absolute;
     z-index: 1;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         display: block;
+    }
+
+    @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        width: 5px;
+        height: 5px;
     }
 }
 
@@ -25,6 +30,11 @@
     opacity: 0;
     top: 0;
     left: 0;
+
+    @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        width: 5px;
+        height: 5px;
+    }
 }
 
 .dot.active:after {

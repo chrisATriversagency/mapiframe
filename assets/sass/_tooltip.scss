@@ -1,6 +1,6 @@
 .tooltip-container {
 
-    @media (max-width: $mobile - 1) {
+    @media (max-width: $bootstrap_mobile) {
         display: flex;
         flex-wrap: wrap;
         margin-left: -15px;
@@ -8,15 +8,18 @@
 }
 
 .tooltip-wrapper {
-    @media (max-width: $mobile - 1) {
-        padding-left: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    display: flex;
+
+    @media (min-width: $xs) and (max-width: $bootstrap_mobile) {
         width: 50%;
-        margin-bottom: 15px;
         display: flex;
         flex-direction: column;
     }
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         position: absolute;
         width: 135px;
         height: 35px;
@@ -34,7 +37,13 @@
 .map-tooltip {
     text-align: left;
 
-    @media (min-width: $mobile) {
+    @media (max-width: $bootstrap_mobile) {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    @media (min-width: $bootstrap_mobile) {
         position: absolute;
         width: 135px;
         z-index: 5;
@@ -65,7 +74,7 @@
 
 .map-tooltip:hover .icon-container {
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         height: 13px;
     }
 }
@@ -87,7 +96,7 @@
 	font-size: 12px;
     display: none;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         display: block;
     }
 }
@@ -98,7 +107,7 @@
 
 .map-tooltip:hover .header {
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         font-size: 15px;
         height: 40px;
     }
@@ -118,11 +127,11 @@
     position: relative;
     background-color: #3B464E;
 
-    @media (max-width: $mobile - 1) {
+    @media (max-width: $bootstrap_mobile - 1) {
         flex: 1;
     }
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         display: none;
     }
 }
@@ -155,13 +164,13 @@
 }
 
 .map-tooltip:hover .icon-container .icon {
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         bottom: 12px;
     }
 }
 
 .map-tooltip:hover .icon {
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         font-size: 25px;
     }
 }
@@ -180,10 +189,27 @@ a.tooltip__link {
     left: 0%;
 
     &:after {
-        width: 54%;
-        transform: rotate(-70deg);
-        left: 24%;
-        top: -84%;
+
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 33%;
+            transform: rotate(-70deg);
+            left: 12%;
+            top: -44%;
+        }
+
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 41%;
+            transform: rotate(-70deg);
+            left: 21%;
+            top: -55%;
+        }
+
+        @media (min-width: $bootstrap_large) {
+            width: 54%;
+            transform: rotate(-70deg);
+            left: 24%;
+            top: -84%;
+        }
     }
 }
 
@@ -192,10 +218,25 @@ a.tooltip__link {
     left: 4%;
 
     &:after {
-        width: 62%;
-        transform: rotate(45deg);
-        left: 22%;
-        top: -84%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 42%;
+            transform: rotate(45deg);
+            left: 11%;
+            top: -41%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 60%;
+            transform: rotate(45deg);
+            left: 19%;
+            top: -41%;
+        }
+
+        @media (min-width: $bootstrap_large) {
+            width: 62%;
+            transform: rotate(45deg);
+            left: 22%;
+            top: -84%;
+        }
     }
 }
 
@@ -209,10 +250,24 @@ a.tooltip__link {
     left: 26%;
 
     &:after {
-        width: 149%;
-        transform: rotate(75deg);
-        left: 19%;
-        top: 312%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 74%;
+            transform: rotate(75deg);
+            left: 18%;
+            top: 198%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 114%;
+            transform: rotate(75deg);
+            left: 19%;
+            top: 267%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 149%;
+            transform: rotate(75deg);
+            left: 19%;
+            top: 312%;
+        }
     }
 }
 
@@ -225,10 +280,24 @@ a.tooltip__link {
     }
 
     &:after {
-        width: 110%;
-        transform: rotate(45deg);
-        left: 62%;
-        top: 200%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 43%;
+            transform: rotate(45deg);
+            left: 53%;
+            top: 142%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 75%;
+            transform: rotate(45deg);
+            left: 63%;
+            top: 183%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 110%;
+            transform: rotate(45deg);
+            left: 62%;
+            top: 200%;
+        }
     }
 }
 
@@ -241,10 +310,24 @@ a.tooltip__link {
     }
 
     &:after {
-        width: 100%;
-        transform: rotate(-70deg);
-        left: -39%;
-        top: 208%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 57%;
+            transform: rotate(-70deg);
+            left: -23%;
+            top: 119%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 75%;
+            transform: rotate(-70deg);
+            left: -28%;
+            top: 168%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 100%;
+            transform: rotate(-70deg);
+            left: -39%;
+            top: 208%;
+        }
     }
 }
 
@@ -253,10 +336,24 @@ a.tooltip__link {
     left: 58%;
 
     &:after {
-        width: 48%;
-        transform: rotate(-38deg);
-        left: -27%;
-        top: 142%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 36%;
+            transform: rotate(-38deg);
+            left: -19%;
+            top: 74%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 48%;
+            transform: rotate(-38deg);
+            left: -27%;
+            top: 117%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 48%;
+            transform: rotate(-38deg);
+            left: -27%;
+            top: 142%;
+        }
     }
 }
 
@@ -269,10 +366,24 @@ a.tooltip__link {
     }
 
     &:after {
-        width: 95%;
-        transform: rotate(55deg);
-        left: -33%;
-        top: -120%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 58%;
+            transform: rotate(55deg);
+            left: -20%;
+            top: -66%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 75%;
+            transform: rotate(55deg);
+            left: -27%;
+            top: -105%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 95%;
+            transform: rotate(55deg);
+            left: -33%;
+            top: -120%;
+        }
     }
 }
 
@@ -285,10 +396,24 @@ a.tooltip__link {
     }
 
     &:after {
-        width: 95%;
-        transform: rotate(152deg);
-        left: -22%;
-        top: 144%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 41%;
+            transform: rotate(152deg);
+            left: -15%;
+            top: 97%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 83%;
+            transform: rotate(152deg);
+            left: -17%;
+            top: 110%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 95%;
+            transform: rotate(152deg);
+            left: -22%;
+            top: 144%;
+        }
     }
 }
 
@@ -297,9 +422,23 @@ a.tooltip__link {
     top: 10%;
 
     &:after {
-        width: 136%;
-        transform: rotate(90deg);
-        left: -23%;
-        top: 310%;
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 71%;
+            transform: rotate(90deg);
+            left: -9%;
+            top: 190%;
+        }
+        @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
+            width: 109%;
+            transform: rotate(90deg);
+            left: -17%;
+            top: 247%;
+        }
+        @media (min-width: $bootstrap_large) {
+            width: 136%;
+            transform: rotate(90deg);
+            left: -23%;
+            top: 310%;
+        }
     }
 }

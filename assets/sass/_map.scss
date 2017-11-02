@@ -1,7 +1,7 @@
 .map-wrapper{
 	text-align: center;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         padding: 0 80px 0 0;
     }
 }
@@ -23,7 +23,7 @@
 #blue-svg {
     display: none;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $bootstrap_mobile) {
         display: block;
     }
 }
