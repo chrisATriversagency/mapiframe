@@ -483,7 +483,7 @@ a.tooltip__link {
 
 #catawba-basin {
   top: 65%;
-  left: 85%; }
+  left: 59%; }
   #catawba-basin:hover .map-tooltip {
     width: 172px; }
     @media (min-width: 517px) and (max-width: 682px) {
@@ -492,9 +492,9 @@ a.tooltip__link {
   @media (min-width: 517px) and (max-width: 682px) {
     #catawba-basin:after {
       width: 16%;
-      -webkit-transform: rotate(38deg);
-              transform: rotate(38deg);
-      left: 14%;
+      -webkit-transform: rotate(142deg);
+              transform: rotate(142deg);
+      left: 61%;
       top: -26%; } }
   @media (min-width: 682px) and (max-width: 830px) {
     #catawba-basin:after {
@@ -514,18 +514,22 @@ a.tooltip__link {
 #research-triangle {
   left: 88%;
   top: 39%; }
+  @media (min-width: 517px) and (max-width: 682px) {
+    #research-triangle {
+      left: 84%;
+      top: 50%; } }
   #research-triangle:hover .map-tooltip {
     width: 172px; }
     @media (min-width: 517px) and (max-width: 682px) {
       #research-triangle:hover .map-tooltip {
-        width: 150px; } }
+        width: 130px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #research-triangle:after {
-      width: 41%;
-      -webkit-transform: rotate(152deg);
-              transform: rotate(152deg);
-      left: -15%;
-      top: 97%; } }
+      width: 20%;
+      -webkit-transform: rotate(33deg);
+              transform: rotate(33deg);
+      left: 0%;
+      top: 63%; } }
   @media (min-width: 682px) and (max-width: 830px) {
     #research-triangle:after {
       width: 83%;
