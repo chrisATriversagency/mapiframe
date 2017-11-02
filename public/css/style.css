@@ -52,15 +52,15 @@ table {
 body {
   font-family: 'Roboto Slab', serif; }
 
-@media (min-width: 768px) {
+@media (min-width: 517px) {
   .custom-map-wrapper {
     width: 517px; } }
 
-@media (min-width: 992px) {
+@media (min-width: 682px) {
   .custom-map-wrapper {
     width: 682px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 830px) {
   .custom-map-wrapper {
     width: 830px; } }
 
@@ -72,10 +72,10 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: 1; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .dot {
       display: block; } }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     .dot {
       width: 5px;
       height: 5px; } }
@@ -93,7 +93,7 @@ body {
   opacity: 0;
   top: 0;
   left: 0; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     .dot:after {
       width: 5px;
       height: 5px; } }
@@ -144,7 +144,7 @@ body {
   left: 84%;
   top: 55%; }
 
-@media (max-width: 768px) {
+@media (max-width: 517px) {
   .tooltip-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -160,7 +160,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media (min-width: 425px) and (max-width: 768px) {
+  @media (min-width: 425px) and (max-width: 517px) {
     .tooltip-wrapper {
       width: 50%;
       display: -webkit-box;
@@ -170,7 +170,7 @@ body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .tooltip-wrapper {
       position: absolute;
       width: 135px;
@@ -184,7 +184,7 @@ body {
 
 .map-tooltip {
   text-align: left; }
-  @media (max-width: 768px) {
+  @media (max-width: 517px) {
     .map-tooltip {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -196,7 +196,7 @@ body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .map-tooltip {
       position: absolute;
       width: 135px;
@@ -225,7 +225,7 @@ body {
   height: 10px;
   position: relative; }
 
-@media (min-width: 768px) {
+@media (min-width: 517px) {
   .map-tooltip:hover .icon-container {
     height: 13px; } }
 
@@ -246,7 +246,7 @@ body {
   border-bottom-left-radius: 5px;
   font-size: 12px;
   height: 30px; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .header {
       font-size: 10px;
       height: 25px; } }
@@ -254,14 +254,14 @@ body {
 .header i {
   font-size: 12px;
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .header i {
       display: block; } }
 
 .map-tooltip:hover .header i {
   display: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 517px) {
   .map-tooltip:hover .header {
     font-size: 15px;
     height: 40px; } }
@@ -279,12 +279,12 @@ body {
   line-height: 1.3;
   position: relative;
   background-color: #3B464E; }
-  @media (max-width: 767px) {
+  @media (max-width: 516px) {
     .content {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; } }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .content {
       display: none; } }
 
@@ -312,11 +312,11 @@ body {
   position: relative;
   margin: 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 517px) {
   .map-tooltip:hover .icon-container .icon {
     bottom: 12px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 517px) {
   .map-tooltip:hover .icon {
     font-size: 25px; } }
 
@@ -329,21 +329,21 @@ a.tooltip__link {
 #columbia-basin {
   top: 27%;
   left: 0%; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #columbia-basin:after {
       width: 33%;
       -webkit-transform: rotate(-70deg);
               transform: rotate(-70deg);
       left: 12%;
       top: -44%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #columbia-basin:after {
       width: 41%;
       -webkit-transform: rotate(-70deg);
               transform: rotate(-70deg);
       left: 21%;
       top: -55%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #columbia-basin:after {
       width: 54%;
       -webkit-transform: rotate(-70deg);
@@ -354,21 +354,21 @@ a.tooltip__link {
 #central-valley {
   top: 66.5%;
   left: 4%; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #central-valley:after {
       width: 42%;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       left: 11%;
       top: -41%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #central-valley:after {
       width: 60%;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       left: 19%;
       top: -41%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #central-valley:after {
       width: 62%;
       -webkit-transform: rotate(45deg);
@@ -383,21 +383,21 @@ a.tooltip__link {
 #rio-grande-valley {
   top: 53%;
   left: 26%; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #rio-grande-valley:after {
       width: 74%;
       -webkit-transform: rotate(75deg);
               transform: rotate(75deg);
       left: 18%;
       top: 198%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #rio-grande-valley:after {
       width: 114%;
       -webkit-transform: rotate(75deg);
               transform: rotate(75deg);
       left: 19%;
       top: 267%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #rio-grande-valley:after {
       width: 149%;
       -webkit-transform: rotate(75deg);
@@ -410,21 +410,21 @@ a.tooltip__link {
   left: 40%; }
   #great-lakes:hover .map-tooltip {
     width: 172px; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #great-lakes:after {
       width: 43%;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       left: 53%;
       top: 142%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #great-lakes:after {
       width: 75%;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       left: 63%;
       top: 183%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #great-lakes:after {
       width: 110%;
       -webkit-transform: rotate(45deg);
@@ -437,21 +437,21 @@ a.tooltip__link {
   top: 37%; }
   #mississippi-basin:hover .map-tooltip {
     width: 172px; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #mississippi-basin:after {
       width: 31%;
       -webkit-transform: rotate(-61deg);
               transform: rotate(-61deg);
       left: -9%;
       top: 102%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #mississippi-basin:after {
       width: 45%;
       -webkit-transform: rotate(-70deg);
               transform: rotate(-70deg);
       left: -15%;
       top: 132%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #mississippi-basin:after {
       width: 61%;
       -webkit-transform: rotate(-70deg);
@@ -462,21 +462,21 @@ a.tooltip__link {
 #galveston-bay {
   top: 70%;
   left: 58%; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #galveston-bay:after {
       width: 36%;
       -webkit-transform: rotate(-38deg);
               transform: rotate(-38deg);
       left: -19%;
       top: 74%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #galveston-bay:after {
       width: 48%;
       -webkit-transform: rotate(-38deg);
               transform: rotate(-38deg);
       left: -27%;
       top: 117%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #galveston-bay:after {
       width: 48%;
       -webkit-transform: rotate(-38deg);
@@ -489,21 +489,21 @@ a.tooltip__link {
   left: 85%; }
   #catawba-basin:hover .map-tooltip {
     width: 172px; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #catawba-basin:after {
       width: 36%;
       -webkit-transform: rotate(38deg);
               transform: rotate(38deg);
       left: -12%;
       top: -4%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #catawba-basin:after {
       width: 42%;
       -webkit-transform: rotate(55deg);
               transform: rotate(55deg);
       left: -19%;
       top: 2%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #catawba-basin:after {
       width: 50%;
       -webkit-transform: rotate(55deg);
@@ -516,21 +516,21 @@ a.tooltip__link {
   top: 39%; }
   #research-triangle:hover .map-tooltip {
     width: 172px; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #research-triangle:after {
       width: 41%;
       -webkit-transform: rotate(152deg);
               transform: rotate(152deg);
       left: -15%;
       top: 97%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #research-triangle:after {
       width: 83%;
       -webkit-transform: rotate(152deg);
               transform: rotate(152deg);
       left: -17%;
       top: 110%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #research-triangle:after {
       width: 95%;
       -webkit-transform: rotate(152deg);
@@ -541,21 +541,21 @@ a.tooltip__link {
 #roanoke-basin {
   left: 78%;
   top: 10%; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (min-width: 517px) and (max-width: 682px) {
     #roanoke-basin:after {
       width: 71%;
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg);
       left: -9%;
       top: 190%; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 682px) and (max-width: 830px) {
     #roanoke-basin:after {
       width: 109%;
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg);
       left: -17%;
       top: 247%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     #roanoke-basin:after {
       width: 136%;
       -webkit-transform: rotate(90deg);
@@ -585,10 +585,10 @@ a.tooltip__link {
   font-size: 12px;
   color: #fff;
   height: 35px; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .key {
       width: 33.33%; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 830px) {
     .key {
       width: 16.66%; } }
 
@@ -596,12 +596,12 @@ a.tooltip__link {
   font-size: 18px;
   margin-right: 10px; }
 
-@media (min-width: 1200px) {
+@media (min-width: 830px) {
   .key:first-of-type {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 830px) {
   .key:last-of-type {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; } }
@@ -658,14 +658,14 @@ a.tooltip__link {
   position: relative;
   bottom: 10px;
   font-size: 18px; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .icon-container .icon {
       bottom: 6px;
       font-size: 15px; } }
 
 .map-wrapper {
   text-align: center; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     .map-wrapper {
       padding: 0 80px 0 0; } }
 
@@ -684,7 +684,7 @@ a.tooltip__link {
 #svg,
 #blue-svg {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 517px) {
     #svg,
     #blue-svg {
       display: block; } }
