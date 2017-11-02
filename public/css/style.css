@@ -195,10 +195,10 @@ body {
       position: absolute;
       width: 135px;
       z-index: 5;
-      -webkit-transition: -webkit-transform .1s .1s ease;
-      transition: -webkit-transform .1s .1s ease;
-      transition: transform .1s .1s ease;
-      transition: transform .1s .1s ease, -webkit-transform .1s .1s ease; }
+      -webkit-transition: -webkit-transform .2s .1s ease-in-out;
+      transition: -webkit-transform .2s .1s ease-in-out;
+      transition: transform .2s .1s ease-in-out;
+      transition: transform .2s .1s ease-in-out, -webkit-transform .2s .1s ease-in-out; }
       .map-tooltip:hover {
         width: 215px;
         z-index: 6; }
