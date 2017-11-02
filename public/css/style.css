@@ -52,6 +52,18 @@ table {
 body {
   font-family: 'Roboto Slab', serif; }
 
+@media (min-width: 768px) {
+  .custom-map-wrapper {
+    width: 517px; } }
+
+@media (min-width: 992px) {
+  .custom-map-wrapper {
+    width: 682px; } }
+
+@media (min-width: 1200px) {
+  .custom-map-wrapper {
+    width: 830px; } }
+
 .dot {
   display: none;
   background-color: #58A0D6;
@@ -189,16 +201,16 @@ body {
       position: absolute;
       width: 135px;
       z-index: 5;
-      -webkit-transition: -webkit-transform .2s .1s ease;
-      transition: -webkit-transform .2s .1s ease;
-      transition: transform .2s .1s ease;
-      transition: transform .2s .1s ease, -webkit-transform .2s .1s ease; }
+      -webkit-transition: -webkit-transform .1s .1s ease;
+      transition: -webkit-transform .1s .1s ease;
+      transition: transform .1s .1s ease;
+      transition: transform .1s .1s ease, -webkit-transform .1s .1s ease; }
       .map-tooltip:hover {
         width: 215px;
         z-index: 6; }
       .map-tooltip.shrink {
-        -webkit-transform: scale(0.95);
-                transform: scale(0.95);
+        -webkit-transform: scale(0.97);
+                transform: scale(0.97);
         opacity: .75; } }
 
 .top {
@@ -396,8 +408,9 @@ a.tooltip__link {
 #great-lakes {
   top: -3%;
   left: 40%; }
-  #great-lakes:hover .map-tooltip {
-    width: 172px; }
+  @media (min-width: 768px) {
+    #great-lakes:hover .map-tooltip {
+      width: 172px; } }
   @media (min-width: 768px) and (max-width: 992px) {
     #great-lakes:after {
       width: 43%;
@@ -423,8 +436,9 @@ a.tooltip__link {
 #mississippi-basin {
   left: 65%;
   top: 28%; }
-  #mississippi-basin:hover .map-tooltip {
-    width: 172px; }
+  @media (min-width: 768px) {
+    #mississippi-basin:hover .map-tooltip {
+      width: 172px; } }
   @media (min-width: 768px) and (max-width: 992px) {
     #mississippi-basin:after {
       width: 57%;
@@ -475,8 +489,9 @@ a.tooltip__link {
 #catawba-basin {
   top: 65%;
   left: 85%; }
-  #catawba-basin:hover .map-tooltip {
-    width: 172px; }
+  @media (min-width: 768px) {
+    #catawba-basin:hover .map-tooltip {
+      width: 172px; } }
   @media (min-width: 768px) and (max-width: 992px) {
     #catawba-basin:after {
       width: 36%;
@@ -502,8 +517,9 @@ a.tooltip__link {
 #research-triangle {
   left: 88%;
   top: 39%; }
-  #research-triangle:hover .map-tooltip {
-    width: 172px; }
+  @media (min-width: 768px) {
+    #research-triangle:hover .map-tooltip {
+      width: 172px; } }
   @media (min-width: 768px) and (max-width: 992px) {
     #research-triangle:after {
       width: 41%;

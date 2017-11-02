@@ -5,6 +5,21 @@ body {
 	font-family: 'Roboto Slab', serif;
 }
 
+.custom-map-wrapper {
+
+    @media (min-width: $bootstrap_mobile) {
+        width: 517px;
+    }
+
+    @media (min-width: $bootstrap_medium) {
+        width: 682px;
+    }
+
+    @media (min-width: $bootstrap_large) {
+        width: 830px;
+    }
+}
+
 @import '_dot';
 @import '_tooltip';
 @import '_legend';
