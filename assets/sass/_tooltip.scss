@@ -1,0 +1,154 @@
+.tooltip {
+    position: absolute;
+    width: 135px;
+    z-index: 5;
+    text-align: left;
+    transition: transform .2s .1s ease;
+}
+
+.tooltip:hover {
+	/*transform: scale(1.1);*/
+    width: 215px;
+    z-index: 6;
+}
+
+.tooltip.shrink {
+    transform: scale(.95);
+    opacity: .75;
+}
+
+.top {
+    display: flex;
+}
+
+.content {
+    display: none;
+    background-color: #3B464E;
+}
+
+.tooltip:hover > .content {
+    display: block;
+}
+
+.icon-container {
+    flex: 1;
+    height: 10px;
+    position: relative;
+}
+
+.tooltip:hover .icon-container {
+	height: 13px;
+}
+
+.header {
+	background-color: #3B464E;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 10px;
+	height: 25px;
+}
+
+.header i {
+	font-size: 12px;
+}
+
+.tooltip:hover .header i {
+	display: none;
+}
+
+.tooltip:hover .header {
+	font-size: 15px;
+	height: 40px;
+}
+
+.content {
+	font-family: 'Roboto', sans-serif;
+	padding: 15px 20px 15px 10px;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	position: relative;
+	margin-top: -3px;
+	font-size: 10px;
+    font-weight: 300;
+    line-height: 1.3;
+    position: relative;
+}
+
+.content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3B464E;
+    opacity: 0.4;
+}
+
+.content i {
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	font-size: 16px;
+}
+
+.content p {
+    position: relative;
+}
+
+#columbia-basin {
+    top: 27%;
+    left: -3%;
+}
+
+#central-valley {
+    top: 66.5%;
+    left: 4%;
+}
+
+#water-utilities {
+    top: 34%;
+    left: 24%;
+}
+
+#rio-grande-valley {
+    top: 66%;
+    left: 30%;
+}
+
+#great-lakes {
+    top: 5%;
+    left: 44%;
+}
+
+#mississippi-basin {
+    left: 58%;
+    top: 36%;
+}
+
+#galveston-bay {
+    top: 70%;
+    left: 58%;
+}
+
+#catawba-basin {
+    top: 79%;
+    left: 85%;
+}
+
+#research-triangle {
+    left: 88%;
+    top: 39%;
+}
+
+#roanoke-basin {
+    left: 78%;
+    top: 10%;
+}

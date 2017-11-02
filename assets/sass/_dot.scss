@@ -1,0 +1,70 @@
+.dot {
+    background-color: #60A2D5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.dot:after {
+	content: '';
+	position: absolute;
+	background-color: #ADC6D9;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all .2s ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.dot.active:after {
+	transform: scale(3);
+	opacity: .7;
+}
+
+.dot--active {
+    transform: scale(2);
+    opacity: .7;
+}
+
+
+#columbia-basin--dot {
+    left: 10%;
+    top: 13.5%;
+}
+#central-valley--dot {
+    left: 9%;
+    top: 53.5%;
+}
+#great-lakes--dot {
+    left: 67%;
+    top: 21.5%;
+}
+#mississippi-basin--dot {
+    left: 63%;
+    top: 56%;
+}
+#rio-grande-valley--dot {
+    top: 95.75%;
+    left: 45.5%;
+}
+#galveston-bay--dot {
+    top: 84%;
+    left: 53%;
+}
+#catawba-basin--dot {
+    left: 82%;
+    top: 58%;
+}
+#roanoke-basin--dot {
+    top: 51.25%;
+    left: 85.5%;
+}
+#research-triangle--dot {
+    left: 84%;
+    top: 55%;
+}
