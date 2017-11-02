@@ -397,6 +397,9 @@ a.tooltip__link {
   left: 40%; }
   #great-lakes:hover .map-tooltip {
     width: 172px; }
+    @media (min-width: 517px) and (max-width: 682px) {
+      #great-lakes:hover .map-tooltip {
+        width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #great-lakes:after {
       width: 43%;
@@ -424,6 +427,9 @@ a.tooltip__link {
   top: 37%; }
   #mississippi-basin:hover .map-tooltip {
     width: 172px; }
+    @media (min-width: 517px) and (max-width: 682px) {
+      #mississippi-basin:hover .map-tooltip {
+        width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #mississippi-basin:after {
       width: 31%;
@@ -450,12 +456,16 @@ a.tooltip__link {
   top: 70%;
   left: 58%; }
   @media (min-width: 517px) and (max-width: 682px) {
+    #galveston-bay {
+      top: 87%;
+      left: 53%; } }
+  @media (min-width: 517px) and (max-width: 682px) {
     #galveston-bay:after {
-      width: 36%;
-      -webkit-transform: rotate(-38deg);
-              transform: rotate(-38deg);
-      left: -19%;
-      top: 74%; } }
+      width: 19%;
+      -webkit-transform: rotate(-130deg);
+              transform: rotate(-130deg);
+      left: -1%;
+      top: 14%; } }
   @media (min-width: 682px) and (max-width: 830px) {
     #galveston-bay:after {
       width: 48%;
@@ -476,13 +486,16 @@ a.tooltip__link {
   left: 85%; }
   #catawba-basin:hover .map-tooltip {
     width: 172px; }
+    @media (min-width: 517px) and (max-width: 682px) {
+      #catawba-basin:hover .map-tooltip {
+        width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #catawba-basin:after {
-      width: 36%;
+      width: 16%;
       -webkit-transform: rotate(38deg);
               transform: rotate(38deg);
-      left: -12%;
-      top: -4%; } }
+      left: 14%;
+      top: -26%; } }
   @media (min-width: 682px) and (max-width: 830px) {
     #catawba-basin:after {
       width: 42%;
@@ -503,6 +516,9 @@ a.tooltip__link {
   top: 39%; }
   #research-triangle:hover .map-tooltip {
     width: 172px; }
+    @media (min-width: 517px) and (max-width: 682px) {
+      #research-triangle:hover .map-tooltip {
+        width: 150px; } }
   @media (min-width: 517px) and (max-width: 682px) {
     #research-triangle:after {
       width: 41%;

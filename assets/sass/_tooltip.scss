@@ -271,6 +271,10 @@ a.tooltip__link {
 
     &:hover .map-tooltip {
         width: 172px;
+
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 150px;
+        }
     }
 
     &:after {
@@ -301,6 +305,10 @@ a.tooltip__link {
 
     &:hover .map-tooltip {
         width: 172px;
+
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 150px;
+        }
     }
 
     &:after {
@@ -329,12 +337,17 @@ a.tooltip__link {
     top: 70%;
     left: 58%;
 
+    @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+        top: 87%;
+        left: 53%;
+    }
+
     &:after {
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
-            width: 36%;
-            transform: rotate(-38deg);
-            left: -19%;
-            top: 74%;
+            width: 19%;
+            transform: rotate(-130deg);
+            left: -1%;
+            top: 14%;
         }
         @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
             width: 48%;
@@ -357,14 +370,18 @@ a.tooltip__link {
 
     &:hover .map-tooltip {
         width: 172px;
+
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 150px;
+        }
     }
 
     &:after {
         @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
-            width: 36%;
+            width: 16%;
             transform: rotate(38deg);
-            left: -12%;
-            top: -4%;
+            left: 14%;
+            top: -26%;
         }
         @media (min-width: $bootstrap_medium) and (max-width: $bootstrap_large) {
             width: 42%;
@@ -387,6 +404,10 @@ a.tooltip__link {
 
     &:hover .map-tooltip {
         width: 172px;
+
+        @media (min-width: $bootstrap_mobile) and (max-width: $bootstrap_medium) {
+            width: 150px;
+        }
     }
 
     &:after {
