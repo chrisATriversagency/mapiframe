@@ -156,7 +156,7 @@ body {
 .tooltip-wrapper {
   margin-bottom: 15px;
   padding-left: 15px;
-  width: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,6 +164,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 425px) {
+    .tooltip-wrapper {
+      width: 50%; } }
   @media (min-width: 517px) {
     .tooltip-wrapper {
       position: absolute;
