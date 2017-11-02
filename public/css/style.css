@@ -232,8 +232,12 @@ body {
   padding: 0 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  font-size: 10px;
-  height: 25px; }
+  font-size: 12px;
+  height: 30px; }
+  @media (min-width: 768px) {
+    .header {
+      font-size: 10px;
+      height: 25px; } }
 
 .header i {
   font-size: 12px;
@@ -293,7 +297,8 @@ body {
   font-size: 16px; }
 
 .content p {
-  position: relative; }
+  position: relative;
+  margin: 0; }
 
 @media (min-width: 768px) {
   .map-tooltip:hover .icon-container .icon {
@@ -468,31 +473,31 @@ a.tooltip__link {
       top: 142%; } }
 
 #catawba-basin {
-  top: 79%;
+  top: 65%;
   left: 85%; }
   #catawba-basin:hover .map-tooltip {
     width: 172px; }
   @media (min-width: 768px) and (max-width: 992px) {
     #catawba-basin:after {
-      width: 58%;
-      -webkit-transform: rotate(55deg);
-              transform: rotate(55deg);
-      left: -20%;
-      top: -66%; } }
+      width: 36%;
+      -webkit-transform: rotate(38deg);
+              transform: rotate(38deg);
+      left: -12%;
+      top: -4%; } }
   @media (min-width: 992px) and (max-width: 1200px) {
     #catawba-basin:after {
-      width: 75%;
+      width: 42%;
       -webkit-transform: rotate(55deg);
               transform: rotate(55deg);
-      left: -27%;
-      top: -105%; } }
+      left: -19%;
+      top: 2%; } }
   @media (min-width: 1200px) {
     #catawba-basin:after {
-      width: 95%;
+      width: 50%;
       -webkit-transform: rotate(55deg);
               transform: rotate(55deg);
-      left: -33%;
-      top: -120%; } }
+      left: -24%;
+      top: 2%; } }
 
 #research-triangle {
   left: 88%;
@@ -639,8 +644,12 @@ a.tooltip__link {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  bottom: 6px;
-  font-size: 15px; }
+  bottom: 10px;
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    .icon-container .icon {
+      bottom: 6px;
+      font-size: 15px; } }
 
 .map-wrapper {
   text-align: center; }
