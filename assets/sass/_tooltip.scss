@@ -84,35 +84,18 @@
 	border-bottom-left-radius: 5px;
 	font-size: 12px;
 	height: 30px;
-    display: none;
+    display: flex;
 
     @media (min-width: $bootstrap_mobile) {
         font-size: 10px;
         height: 25px;
         padding: 0 10px;
-        display: flex;
     }
 }
 
 .header i {
 	font-size: 12px;
     transform: rotate(-90deg);
-}
-
-.mobile-header {
-    display: flex;
-    align-items: center;
-    @media (min-width: $bootstrap_mobile) {
-        display: none;
-    }
-}
-
-.mobile-header-link {
-    justify-content: space-between;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    width: 100%;
 }
 
 .map-tooltip:hover .header i {
@@ -143,7 +126,11 @@
     line-height: 1.3;
     position: relative;
     background-color: #3B464E;
-    display: none;
+    flex: 1;
+
+    @media (min-width: $bootstrap_mobile) {
+        display: none;
+    }
 }
 
 .map-tooltip:hover > .content {
