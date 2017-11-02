@@ -8,16 +8,11 @@
 }
 
 .tooltip-wrapper {
-    width: 100%;
     margin-bottom: 15px;
     padding-left: 15px;
+    width: 50%;
     display: flex;
-
-    @media (min-width: $xs) and (max-width: $bootstrap_mobile) {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
+    flex-direction: column;
 
     @media (min-width: $bootstrap_mobile) {
         position: absolute;
@@ -85,7 +80,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 10px;
+	padding: 0 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	font-size: 12px;
@@ -94,20 +89,20 @@
     @media (min-width: $bootstrap_mobile) {
         font-size: 10px;
         height: 25px;
+        padding: 0 10px;
     }
 }
 
 .header i {
 	font-size: 12px;
-    display: none;
-
-    @media (min-width: $bootstrap_mobile) {
-        display: block;
-    }
+    transform: rotate(-90deg);
 }
 
 .map-tooltip:hover .header i {
-	display: none;
+
+    @media (min-width: $bootstrap_mobile) {
+        display: none;
+    }
 }
 
 .map-tooltip:hover .header {
@@ -131,14 +126,7 @@
     line-height: 1.3;
     position: relative;
     background-color: #3B464E;
-
-    @media (max-width: $bootstrap_mobile - 1) {
-        flex: 1;
-    }
-
-    @media (min-width: $bootstrap_mobile) {
-        display: none;
-    }
+    display: none;
 }
 
 .map-tooltip:hover > .content {
