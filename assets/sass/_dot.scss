@@ -1,10 +1,16 @@
 .dot {
+    display: none;
+
     background-color: #60A2D5;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+
+    @media (min-width: $mobile) {
+        display: block;
+    }
 }
 
 .dot:after {

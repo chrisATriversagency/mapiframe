@@ -1,0 +1,39 @@
+.icon-container--blue {
+    background-color: $blue;
+}
+
+.icon-container--green {
+    background-color: $green;
+}
+
+.icon-container--yellow {
+    background-color: $yellow;
+}
+
+.icon-container--red {
+    background-color: $red;
+}
+
+.icon-container--dark-purple {
+    background-color: $dark-purple;
+}
+
+.icon-container--purple {
+    background-color: $purple;
+}
+
+.icon-container:last-of-type {
+	border-top-right-radius: 5px;
+}
+
+.icon-container:first-of-type {
+    border-top-left-radius: 5px;
+}
+
+.icon-container .icon {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 6px;
+    font-size: 15px;
+}

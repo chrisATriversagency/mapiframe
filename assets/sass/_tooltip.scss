@@ -1,33 +1,50 @@
+.tooltip-container {
+
+    @media (max-width: $mobile - 1) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+    }
+}
+
 .tooltip {
-    position: absolute;
-    width: 135px;
-    z-index: 5;
     text-align: left;
-    transition: transform .2s .1s ease;
+
+    @media (max-width: $mobile - 1) {
+        padding-left: 15px;
+        width: 50%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: $mobile) {
+        position: absolute;
+        width: 135px;
+        z-index: 5;
+        transition: transform .2s .1s ease;
+    }
 }
 
 .tooltip:hover {
-	/*transform: scale(1.1);*/
-    width: 215px;
-    z-index: 6;
+
+    @media (min-width: $mobile) {
+        /*transform: scale(1.1);*/
+        width: 215px;
+        z-index: 6;
+    }
 }
 
 .tooltip.shrink {
-    transform: scale(.95);
-    opacity: .75;
+
+    @media (min-width: $mobile) {
+        transform: scale(.95);
+        opacity: .75;
+    }
 }
 
 .top {
     display: flex;
-}
-
-.content {
-    display: none;
-    background-color: #3B464E;
-}
-
-.tooltip:hover > .content {
-    display: block;
 }
 
 .icon-container {
@@ -37,7 +54,10 @@
 }
 
 .tooltip:hover .icon-container {
-	height: 13px;
+
+    @media (min-width: $mobile) {
+        height: 13px;
+    }
 }
 
 .header {
@@ -55,6 +75,11 @@
 
 .header i {
 	font-size: 12px;
+    display: none;
+
+    @media (min-width: $mobile) {
+        display: block;
+    }
 }
 
 .tooltip:hover .header i {
@@ -62,8 +87,11 @@
 }
 
 .tooltip:hover .header {
-	font-size: 15px;
-	height: 40px;
+
+    @media (min-width: $mobile) {
+        font-size: 15px;
+        height: 40px;
+    }
 }
 
 .content {
@@ -78,6 +106,19 @@
     font-weight: 300;
     line-height: 1.3;
     position: relative;
+    background-color: #3B464E;
+
+    @media (max-width: $mobile - 1) {
+        flex: 1;
+    }
+
+    @media (min-width: $mobile) {
+        display: none;
+    }
+}
+
+.tooltip:hover > .content {
+    display: block;
 }
 
 .content:before {
@@ -101,6 +142,18 @@
 
 .content p {
     position: relative;
+}
+
+.tooltip:hover .icon-container .icon {
+    @media (min-width: $mobile) {
+        bottom: 12px;
+    }
+}
+
+.tooltip:hover .icon {
+    @media (min-width: $mobile) {
+        font-size: 25px;
+    }
 }
 
 #columbia-basin {
