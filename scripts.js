@@ -3,7 +3,7 @@
     var toolTips = document.querySelectorAll('.map-tooltip');
     var waterUtilities = document.getElementById('water-utilities');
     var blueMap = document.getElementById('blue-svg');
-console.log(toolTips);
+
     if (waterUtilities != null) {
     	waterUtilities.addEventListener('mouseover', function() {
     		blueMap.style.opacity = '1';
